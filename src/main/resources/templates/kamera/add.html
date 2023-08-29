@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Add kamera</h1>
+<form th:action="@{~/kamera/save}" method="post">
+    <label>Id</label><br>
+    <input type="text" name="id" id="id"><br/>
+
+    <label>code</label><br>
+    <input type="text" name="code" id="code"><br/>
+
+    <label>name</label><br>
+    <input type="text" name="name" id="name"><br/>
+
+    <label>merk</label><br>
+    <input type="text" name="merk" id="merk"><br>
+
+    <label>sensor</label><br>
+    <input type="text" name="sensor" id="sensor"><br/>
+
+    <label>price</label><br>
+    <input type="text" name="price" id="price"><br/>
+
+    <label>fitur</label><br>
+    <input type="text" name="fitur" id="fitur"><br/>
+
+    <label>lensa</label><br>
+    <input type="text" name="lensa" id="lensa"><br/>
+
+    <label>aksesoris</label><br>
+    <input type="text" name="aksesoris" id="aksesoris"><br/>
+
+    <button type="submit">Simpan</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Detail Hp</h1>
+<form th:action="@{~/hp/save}" method="post">
+    <label>ID</label><br>
+    <input type="text" name="id" id="id" th:value="${hp.id}"><br/>
+
+    <label>Kode</label><br>
+    <input type="text" name="code" id="code" th:value="${hp.id}"><br/>
+
+    <label>Nama</label><br>
+    <input type="text" name="name" id="name" th:value="${hp.name}"><br/>
+
+    <label>Ram</label><br>
+    <input type="text" name="ram" id="ram" th:value="${hp.ram}"><br/>
+
+    <label>Baterai</label><br>
+    <input type="text" name="baterai" id="baterai" th:value="${hp.baterai}"><br/>
+
+    <label>Storage</label><br>
+    <input type="text" name="storage" id="storage" th:value="${hp.storage}"><br/>
+
+    <label>Layar</label><br>
+    <input type="text" name="layar" id="layar" th:value="${hp.layar}"><br/>
+
+    <label>Warna</label><br>
+    <input type="text" name="warna" id="warna" th:value="${hp.warna}"><br/>
+
+    <label>Dimensi</label><br>
+    <input type="text" name="dimensi" id="dimensi" th:value="${hp.dimensi}"><br/>
+
+    <label>Rilis</label><br>
+    <input type="text" name="rilis" id="rilis" th:value="${hp.rilis}"><br/>
+
+    <label>Harga</label><br>
+    <input type="text" name="harga" id="harga" th:value="${hp.harga}"><br/>
+
+    <label>Stock</label><br>
+    <input type="text" name="stock" id="stock" th:value="${hp.stock}"><br/>
+
+</form>
+
+</body>
+</html>

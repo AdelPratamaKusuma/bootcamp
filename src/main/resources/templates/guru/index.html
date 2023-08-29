@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>DATA GURU SMK DOSQ</h1>
+<a th:href="@{~/guru/add}">isi data</a>
+<p>DATA GURU</p>
+<p th:value="${dataJudul}">judul</p>
+
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>code</th>
+        <th>name</th>
+        <th>jenisKelamin</th>
+        <th>mapel</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="guru : ${ListGuru}">
+        <td th:text="${guru.id}"></td>
+        <td th:text="${guru.code}"></td>
+        <td th:text="${guru.name}"></td>
+        <td th:text="${guru.jenisKelamin}"></td>
+        <td th:text="${guru.mapel}"></td>
+    </tr>
+    <tr>
+        <td colspan="5">Jumlah Data Guru</td>
+        <td><strong th:text="${jmlhData}"></strong></td>
+    </tr>
+    </tbody>
+</table>
+<body>
+
+
+</body>
+</html>

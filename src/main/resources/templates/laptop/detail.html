@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>DETAIL HTML</h1>
+<form th:action="@{~/laptop/save}" method="post">
+    <label>ID</label><br>
+    <input type="text" name="id" id="id" th:value="${laptop.id}"><br/>
+
+    <label>Kode</label><br>
+    <input type="text" name="code" id="code" th:value="${laptop.code}"><br/>
+
+    <label>Nama</label><br>
+    <input type="text" name="name" id="name" th:value="${laptop.name}"><br/>
+
+    <label>Ram</label><br>
+    <input type="text" name="ram" id="ram" th:value="${laptop.ram}"><br/>
+
+    <label>Procesor</label><br>
+    <input type="text" name="procesor" id="procesor" th:value="${laptop.procesor}"><br/>
+
+    <label>Storage</label><br>
+    <input type="text" name="storage" id="storage" th:value="${laptop.storage}"><br/>
+
+    <label>os</label><br>
+    <input type="text" name="os" id="os" th:value="${laptop.os}"><br/>
+
+    <label>Layar</label><br>
+    <input type="text" name="layar" id="layar" th:value="${laptop.layar}"><br/>
+
+    <label>Dimensi</label><br>
+    <input type="text" name="dimensi" id="dimensi" th:value="${laptop.dimensi}"><br/>
+
+    <label>Warna</label><br>
+    <input type="text" name="warna" id="warna" th:value="${laptop.warna}"><br/>
+
+    <lebel>Rilis</lebel><br>
+    <input type="text" name="rilis" id="rilis" th:value="${laptop.rilis}"><br/>
+
+    <label>Harga</label><br>
+    <input type="text" name="harga" id="harga" th:value="${laptop.harga}"><br/>
+
+    <label>Stock</label><br>
+    <input type="text" name="stock" id="stock" th:value="${laptop.stock}"><br/>
+</form>
+
+</body>
+</html>

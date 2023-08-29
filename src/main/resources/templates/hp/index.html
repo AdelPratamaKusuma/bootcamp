@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index hp</title>
+</head>
+<body>
+<h1>HP INDEX</h1>
+<a th:href="@{~/hp/add}">New Hp</a>
+<p>Welcome to HP index</p>
+<p th:text="${datajudul}">judul</p>
+
+<table>
+    <thead>
+       <tr>
+           <th>id</th>
+           <th>code</th>
+           <th>name</th>
+           <th>ram</th>
+           <th>baterai</th>
+           <th>storage</th>
+           <th>layar</th>
+           <th>warna</th>
+           <th>dimensi</th>
+           <th>rilis</th>
+           <th>harga</th>
+           <th>stock</th>
+       </tr>
+    </thead>
+    <tbody>
+      <tr th:each="hp :${ListHp}">
+          <td th:text="${hp.id}"></td>
+          <td th:text="${hp.code}"></td>
+          <td th:text="${hp.name}"></td>
+          <td th:text="${hp.ram}"></td>
+          <td th:text="${hp.baterai}"></td>
+          <td th:text="${hp.storage}"></td>
+          <td th:text="${hp.layar}"></td>
+          <td th:text="${hp.warna}"></td>
+          <td th:text="${hp.dimensi}"></td>
+          <td th:text="${hp.rilis}"></td>
+          <td th:text="${hp.harga}"></td>
+          <td th:text="${hp.stock}"></td>
+
+          <td>
+              <a th:href="@{~/hp/edit/{id}(id=${hp.id})}">Edit</a>
+              <a th:href="@{~/hp/delete/{id}(id=${hp.id})}">Delete</a>
+              <a th:href="@{~/hp/detail/{id}(id=${hp.id})}">Detail</a>
+          </td>
+
+      </tr>
+    <tr>
+        <td colspan="13">Jumlah Data</td>
+        <td><strong th:text="${jmlData}"></strong></td>
+    </tr>
+
+    </tbody>
+</table>
+
+</body>
+</html>

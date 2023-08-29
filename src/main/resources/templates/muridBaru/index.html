@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>SELAMAT DATANG</h1>
+<h3>silahkan klik daftar untuk mendaftar</h3>
+<a th:href="@{~/muridBaru/add}">Daftar</a>
+<p th:href="${dataJudul}">judul</p>
+<table>
+    <thead>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>jenisKelamin</td>
+        <td>alamat</td>
+        <td>asalSekolah</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="muridBaru : ${ListMuridBaru}">
+        <td th:text="${muridBaru.id}"></td>
+        <td th:text="${muridBaru.name}"></td>
+        <td th:text="${muridBaru.jenisKelamin}"></td>
+        <td th:text="${muridBaru.alamat}"></td>
+        <td th:text="${muridBaru.asalSekolah}"></td>
+
+        <td>
+            <a th:href="@{~/muridBaru/edit/{id}(id=${muridBaru.id})}">edit</a>
+            <a th:href="@{~/muridBaru/delete/{id}(id=${muridBaru.id})}">delete</a>
+            <a th:href="@{~/muridBaru/detail/{id}(id=${muridBaru.id})}">detail</a>
+        </td>
+
+    </tr>
+    <td colspan="5">jumlah data murid yang sudah mendaftar</td>
+    <td><strong th:text="${jmlhData}"></strong></td>
+    </tbody>
+</table>
+</body>
+</html>

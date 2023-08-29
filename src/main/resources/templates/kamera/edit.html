@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Edit kamera</h1>
+<form th:action="@{~/kamera/update}" method="post">
+    <label>Id</label><br>
+    <input type="text" name="id" id="id" th:value="${kamera.id}"><br/>
+
+    <label>code</label><br>
+    <input type="text" name="code" id="code" th:value="${kamera.code}"><br/>
+
+    <label>name</label><br>
+    <input type="text" name="name" id="name" th:value="${kamera.name}"><br/>
+
+    <label>merk</label><br>
+    <input type="text" name="merk" id="merk" th:value="${kamera.merk}"><br>
+
+    <label>sensor</label><br>
+    <input type="text" name="sensor" id="sensor" th:value="${kamera.sensor}"><br/>
+
+    <label>price</label><br>
+    <input type="text" name="price" id="price" th:value="${kamera.price}"><br/>
+
+    <label>fitur</label><br>
+    <input type="text" name="fitur" id="fitur" th:value="${kamera.fitur}"><br/>
+
+    <label>lensa</label><br>
+    <input type="text" name="lensa" id="lensa" th:value="${kamera.lensa}"><br/>
+
+    <label>aksesoris</label><br>
+    <input type="text" name="aksesoris" id="aksesoris" th:value="${kamera.aksesoris}"><br/>
+
+    <button type="submit">simpan</button>
+
+
+</form>
+
+</body>
+</html>

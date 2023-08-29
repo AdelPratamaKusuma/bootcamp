@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Edit</h1>
+<form th:action="@{~/muridBaru/update}" method="post">
+    <label>Id</label><br>
+    <input type="text" name="id" id="id" th:value="${muridBaru.id}" ><br/>
+
+    <label>Name</label><br>
+    <input type="text" name="name" id="name" th:value="${muridBaru.name}"><br/>
+
+    <label>JenisKelamin</label><br>
+    <input type="text" name="jenisKelamin" id="jenisKelamin" th:value="${muridBaru.jenisKelamin}"><br/>
+
+    <label>Alamat</label><br>
+    <input type="text" name="alamat" id="alamat" th:value="${muridBaru.alamat}"><br/>
+
+    <label>AsalSekolah</label><br>
+    <input type="text" name="asalSekolah" id="asalSekolah" th:value="${muridBaru.asalSekolah}"><br/>
+
+    <button type="submit">simpan</button>
+</form>
+
+</body>
+</html>

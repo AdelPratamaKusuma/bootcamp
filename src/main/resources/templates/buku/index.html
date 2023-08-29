@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>BUKU INDEX</h1>
+<a th:href="@{~/buku/add}">New Buku</a>
+<p>welcome to BUKU index</p>
+<p th:text="${dataJudul}">Judul</p>
+
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>code</th>
+        <th>judul</th>
+        <th>pengarang</th>
+        <th>tahunTerbir</th>
+        <th>jmlhHalaman</th>
+        <th>penerbit</th>
+        <th>bahasa</th>
+        <th>deskripsi</th>
+        <th>harga</th>
+        <th>stock</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="buku :${ListBuku}">
+        <td th:text="${buku.id}"></td>
+        <td th:text="${buku.code}"></td>
+        <td th:text="${buku.judul}"></td>
+        <td th:text="${buku.pengarang}"></td>
+        <td th:text="${buku.tahunTerbit}"></td>
+        <td th:text="${buku.jmlhHalaman}"></td>
+        <td th:text="${buku.penerbit}"></td>
+        <td th:text="${buku.deskripsi}"></td>
+        <td th:text="${buku.harga}"></td>
+        <td th:text="${buku.stock}"></td>
+
+        <td>
+            <a th:href="@{~/buku/edit/{id}(id=${buku.id})}">EDIT</a>
+            <a th:href="@{~/buku/delete/{id}(id=${buku.id})}">DELETE</a>
+            <a th:href="@{~/buku/detail/{id}(id=${buku.id})}">DETAIL</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="10">Jumlah Data Buku</td>
+        <td><strong th:text="${jmlhData}"></strong></td>
+    </tr>
+</table>
+
+</body>
+</html>

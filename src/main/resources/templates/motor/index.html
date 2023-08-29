@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>INDEX HTML</h1>
+<a th:href="@{~/motor/add}">New Motor</a>
+<p>WELCOME TO MOTOR INDEX</p>
+<p th:href="${dataJudul}">JUDUL</p>
+
+<table>
+    <thead>
+    <tr>
+        <td>id</td>
+        <td>code</td>
+        <td>name</td>
+        <td>merk</td>
+        <td>platMtr</td>
+        <td>bahanBakar</td>
+        <td>cc</td>
+        <td>warna</td>
+        <td>harga</td>
+        <td>stock</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="motor : ${ListMotor}">
+        <td th:text="${motor.id}"></td>
+        <td th:text="${motor.code}"></td>
+        <td th:text="${motor.name}"></td>
+        <td th:text="${motor.merk}"></td>
+        <td th:text="${motor.platMtr}"></td>
+        <td th:text="${motor.bahanBakar}"></td>
+        <td th:text="${motor.cc}"></td>
+        <td th:text="${motor.warna}"></td>
+        <td th:text="${motor.harga}"></td>
+        <td th:text="${motor.stock}"></td>
+
+        <td>
+            <a th:href="@{~/motor/edit/{id}(id=${motor.id})}">Edit</a>
+            <a th:href="@{~/motor/delete/{id}(id=${motor.id})}">Delete</a>
+            <a th:href="@{~/motor/detail/{id}(id=${motor.id})}">Detial</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="10">JUMLAH DATA MOTOR</td>
+        <td><strong th:text="${jmlhData}"></strong></td>
+    </tr>
+    </tbody>
+
+
+
+</table>
+
+</body>
+</html>

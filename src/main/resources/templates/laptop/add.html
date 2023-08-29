@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD LAPTOP</title>
+</head>
+<body>
+<h1>ADD LAPTOP</h1>
+<form th:action="@{~/laptop/save}" method="post">
+    <label>ID</label><br>
+    <input type="text" name="id" id="id"><br/>
+
+    <label>Kode</label><br>
+    <input type="text" name="code" id="code"><br/>
+
+    <label>Nama</label><br>
+    <input type="text" name="name" id="name"><br/>
+
+    <label>Ram</label><br>
+    <input type="text" name="ram" id="ram"><br/>
+
+    <label>Procesor</label><br>
+    <input type="text" name="procesor" id="procesor"><br/>
+
+    <label>Storage</label><br>
+    <input type="text" name="storage" id="storage"><br/>
+
+    <label>os</label><br>
+    <input type="text" name="os" id="os"><br/>
+
+    <label>Layar</label><br>
+    <input type="text" name="layar" id="layar"><br/>
+
+    <label>Dimensi</label><br>
+    <input type="text" name="dimensi" id="dimensi"><br/>
+
+    <label>Warna</label><br>
+    <input type="text" name="warna" id="warna"><br/>
+
+    <label>Rilis</label><br>
+    <input type="text" name="rilis" id="rilis"><br/>
+
+    <label>Harga</label><br>
+    <input type="text" name="harga" id="harga"><br/>
+
+    <label>Stock</label><br>
+    <input type="text" name="stock" id="stock">
+
+    <button type="submit">SIMPAN</button>
+</form>
+
+</body>
+</html>
